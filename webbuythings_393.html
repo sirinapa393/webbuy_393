@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="buyeverythings.css">
+    <title>Doll Store</title>
+</head>
+<body>
+    <header>
+        <div class="slideshow-container">
+            <h1>product</h1>
+            <h3>Carousel</h3>
+            <div class="mySlides">
+              <img src="web\Untitled-1.png" alt="Image 1" width="150px">
+            </div>
+          
+            <div class="mySlides">
+              <img src="web\2.png" alt="Image 2"width="150px">
+            </div>
+          
+            <div class="mySlides">
+              <img src="web\3.png" alt="Image 3"width="150px">
+            </div>
+
+            <div class="mySlides">
+                <img src="web\4.png" alt="Image 4"width="150px">
+              </div>
+
+          </div>
+          
+          <script>
+            var slideIndex = 0;
+            showSlides();
+          
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {
+                slideIndex = 1;
+              }
+              slides[slideIndex - 1].style.display = "block";
+              setTimeout(showSlides, 2000); 
+            }
+          </script>
+    </header>
+    
+    <section class="product-list">
+        <div class="product">
+            <img src="Untitled-1.png" alt="" width="350px">
+            <h2>DJUNGELSKOG ยุงเงลสกูก</h2>
+            <p>ตุ๊กตาผ้า, แพนด้า</p>
+            <p2>690บาท</p2>
+                <br><br>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="web\2.png" alt="Product 2" width="350px">
+            <h2>DJUNGELSKOG ยุงเงลสกูก</h2>
+            <p>ตุ๊กตาผ้า, หมีสีน้ำตาล</p>
+            <p2>990บาท</p2>
+                <br>
+                <br>
+            <button>Add to Cart</button>
+        </div>
+        
+        <br><div class="product">
+            <img src="web\3.png" alt="Product 3" width="350px">
+            <h2>GOSIG GOLDEN กูสซิก โกลเด้น</h2>
+            <p>ตุ๊กตาผ้า, สุนัข/สุนัขโกลเด้น, 70 ซม.</p>
+            <p2>690บาท</p2>
+                <br><br>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="web\4.png" alt="Product 4"width="350px">
+            <h2>BLÅVINGAD บลัววิงกอด</h2>
+            <p>ตุ๊กตาผ้า, วาฬออร์กา/ดำ ขาว, 60 ซม.</p>
+            <p2>399บาท</p2>
+                <br><br>
+            <button>Add to Cart</button>
+        </div>
+    </section>
+    <div id="modal" class="modal">
+      <h2>รายละเอียดสินค้า</h2>
+      <p>ราคารวม: <span id="totalPrice">0.00 บาท</span></p>
+    </div>
+<form id="orderForm">
+  <label for="name">ชื่อ:</label>
+  <input type="text" id="name" required>
+  
+  <label for="email">อีเมล:</label>
+  <input type="email" id="email" required>
+  
+  <button type="submit">สั่งซื้อ</button>
+</form>
+<script src="buythings_393.js"></script>
+</body>
+</html>
